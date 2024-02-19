@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colors</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Using our own custom-color -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              myColor: {
+                100: "#121212",
+                200: "#fff",
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!-- We use utility classes in the tailwind CSS which are the pre-written classes which we can use without writing the CSS of the classes -->
+    <h1 class="text-blue-700 bg-red-700 border-4 border-myColor-100">
+      Hello World
+    </h1>
+  </body>
+</html>
